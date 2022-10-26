@@ -162,7 +162,7 @@ var_dump($cachedData());*/
 
 var_dump($cachedData('cache_key'));*/
 
-function sum(int $a, int $b): int
+/*function sum(int $a, int $b): int
 {
     $c = function () use ($b) {
         return $b ** 2;
@@ -171,4 +171,20 @@ function sum(int $a, int $b): int
     return $a + $b + $c();
 }
 
-var_dump(sum(2, 2));
+var_dump(sum(2, 2));*/
+
+/*function text(string $a): string
+{
+    return $a;
+}
+
+$result = text('text');*/
+
+function arrayPrinter(array $array): void
+{
+    foreach ($array as $value) {
+        echo $value . PHP_EOL;
+    }
+}
+
+arrayPrinter(['tekstas 1', 'tekstas 2', 'tekstas 3']);

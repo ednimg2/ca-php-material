@@ -182,7 +182,7 @@ $b = array_map(
 
 var_dump($b);*/
 
-/*$products = [
+$products = [
     [
         'name' => 'name 1',
         'price' => 20,
@@ -209,7 +209,7 @@ foreach ($products as $product) {
 }
 
 var_dump($allPrice);
-var_dump($allPrice2);*/
+var_dump($allPrice2);
 
 $a = [1, 2, 3, 4, 5, 6];
 

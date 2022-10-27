@@ -201,3 +201,68 @@ function ipResults(array $newIpList)
 var_dump(ipResults(['15.1.2.2', '1.9.2.6', '122.1.2.1']));
 
 
+function getShoppingCart(): array
+{
+    return [
+        'products' => [
+            'Comfy chair' => 'no data',
+            'Yellow lamp' => [
+                'price' => 15.3,
+                'quantity' => 2,
+            ],
+            'Didzioji sofa' => [
+                'pavadinimas' => 'Didzioji sofa',
+                'kaina' => 'trylika eurų'
+            ],
+            'Softest rug' => [
+                'price' => 27.3,
+                'quantity' => 3,
+                'discount' => 13,
+            ],
+            'Blue shelf' => [],
+        ],
+        'cartDiscounts' => [5, 16, 15],
+    ];
+}
+// Visose užduotyse stenkitės naudoti array funkcijas
+
+function exercise1(): void
+{
+
+    /*
+    Išspausdinti visų krepšelio produktų pavadinimus vienoje eilutėje.
+    Comfy chair, Yellow lamp, Didzioji sofa, Softest rug, Blue shelf
+    */
+}
+
+function exercise2(): float
+{
+    /*
+    Suskaičiuokite pirkimų krepšelio bendrą sumą (price * quantity)
+    Kaip matote, krepšelio duomenys, kuriuos gavome iš svetimos sistemos, yra netvarkingi.
+    - Skaičiuojant reikėtų atsižvelgti tik į produktus, kurie turi laukus 'price' ir 'quantity'.
+    Jeigu produkto laukai užvadinti kitais pavadinimais arba iš viso jų neturi, tą produktą reikia ignoruoti.
+
+    */
+
+    return 0;
+}
+
+function exercise3(): float
+{
+
+    /*
+    Suskaičiuokite pirkinių krepšelio bendrą sumą.
+    Galioja tos pačios salygos kaip ir funkcijoje exercise2, bet papildomai reikia:
+    - Skaičiuojant bendrą sumą pritaikyti nuolaidas.
+    Nuolaida laikoma 'cartDiscounts' masyve, taip pat nuolaida gali būti ir prie produkto - 'discount'.
+    Abi reikšmės yra išreikštos procentais.
+    Nuolaidos sumuojasi.
+    Krepšelio nuolaida taikoma bendrai krepšelio sumai.
+    Naudojama tik viena, didžiausia su krepšeliu susieta nuolaida ('cartDiscounts').
+    */
+
+    return 0;
+}
+
+

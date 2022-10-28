@@ -100,7 +100,7 @@ var_dump(str_split(str_replace(' ', '', $string)));
 var_dump(str_split($string, 2));*/
 
 
-var_dump(str_replace(' ', '', $string));
+/*var_dump(str_replace(' ', '', $string));
 var_dump(str_replace('fox', 'cat', $string));
 
 $sentence = 'I like eat pizza, donuts and drink cola';
@@ -112,5 +112,103 @@ var_dump(str_replace($search, $replace, $sentence));
 var_dump(str_replace(['i', 'e'], ['I', 'E'], $sentence));
 
 $string2 = 'Lorem*%dolor$sentence#';
-var_dump(str_replace(['$','%','*','#'], ' ', $string2));
+var_dump(str_replace(['$','%','*','#'], ' ', $string2));*/
 
+
+/*$emails = [
+    'some@email.com',
+    'someAemail.com',
+    'another@gmail.com',
+    'notAreal.email.com',
+    'real@gmail.com',
+];
+
+function exercise2(array $emails): array
+{
+    $filteredEmails = array_filter(
+        $emails,
+        function (string $email): bool {
+            if ((bool) strstr($email, '@')) {
+                return true;
+            }
+
+            return false;
+        }
+    );
+
+    return $filteredEmails;
+}
+
+function exercise_best_practice(array $emails): array
+{
+    return array_filter(
+        $emails,
+        function (string $email): bool {
+            return (bool) strstr($email, '@');
+        }
+    );
+}
+
+var_dump(exercise2($emails));
+var_dump(exercise_best_practice($emails));*/
+
+/*$someProducts = [
+    '000_product_1  ',
+    ' 000_product_2',
+    '000_product_3  ',
+    '000_product_4',
+    '  000_product_5 ',
+    '000_product_20
+    ',
+];
+
+function exercise4(array $products): int
+{
+//
+//    Suskaičiuokite ir grąžinkite visų $products masyve esančių eilučių ilgių sumą, BET
+//    į sumą neįtraukite tuščių simbolių - ty. tarpų, new line ir pan.
+//    Naudokite $someProducts masyvą.
+//
+    return array_reduce(
+        $products,
+        function (int $sum, string $product) {
+            $sum += strlen(
+                trim($product)
+            );
+
+            return $sum;
+        },
+        0
+    );
+}
+
+var_dump(exercise4($someProducts));*/
+
+//var_dump(mb_substr_count('Suskaičiuokite ir grąžinkite visų', 't'));
+
+/*function exercise5(): int
+{
+    $text = 'The African philosophy of Ubuntu has its roots in the Nguni word for being human.
+    The concept emphasises the significance of our community and shared humanity and teaches
+    us that "A person is a person through others". Many view the philosphy as a counterweight
+    to the culture of individualism in our contemporary world.';
+
+    return preg_match_all('/[aeiouy]/i', $text);
+}
+
+var_dump(exercise5());*/
+
+/*$str = 'abcdef';
+$shuffled = str_shuffle($str);
+
+// This will echo something like: bfdaec
+echo $shuffled;*/
+
+/*$text = 'The African philosophy of Ubuntu has its roots in the Nguni word for being human.
+    The concept emphasises the significance of our community and shared humanity and teaches
+    us that "A person is a person through others". Many view the philosphy as a counterweight
+    to the culture of individualism in our contemporary world.';
+
+var_dump(str_word_count($text)); // grazina count'a
+var_dump(str_word_count($text, 1)); // grazina zodziu masyva
+var_dump(str_word_count($text, 2)); // grazina zodziu masyva, key sumuojamas su simboliu count'u*/
